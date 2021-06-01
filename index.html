@@ -378,9 +378,6 @@ statements don&apos;t produce any output so you get only the standard<br>
 <p><a href="http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html">Jupyter Notebook Markdown Docs</a></p>
 </li>
 <li>
-<p><a href="https://beegit.com/markdown-cheat-sheet">Markdown - a Visual Guide</a></p>
-</li>
-<li>
 <p><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown from Github</a></p>
 </li>
 <li>
@@ -392,6 +389,7 @@ statements don&apos;t produce any output so you get only the standard<br>
 <p>When you run cells of code the output is displayed immediately below the cell. In general this is convenient. The output is associated with the cell that produced it and remains a part of the notebook. So if you copy or move the notebook the output stays with the code.</p>
 <p>However lots of output can make the notebook look cluttered and more difficult to move around. So there is an option available from the cell menu item to &apos;toggle&apos; or &apos;clear&apos; the output associated either with an individual cell or all cells in the notebook.</p>
 <h2>Creating variables and assigning values</h2>
+<p><strong>The Notebook for this section can be found</strong> <a href="scripts\Python_Essentials_basics.ipynb">here</a></p>
 <h3 class="mume-header" id="variables-and-types">Variables and Types</h3>
 
 <p>Comparison with Excel : see <a href="Digression_variables.docx">Digression_Variables.docx</a></p>
@@ -420,7 +418,6 @@ the <a href="https://docs.python.org/3/library/datatypes.html">Python documentat
 <span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token operator">/</span> b<span class="token punctuation">)</span>                   <span class="token comment"># division</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>b <span class="token operator">**</span> a<span class="token punctuation">)</span>                  <span class="token comment"># exponentiation</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> a <span class="token operator">%</span> b<span class="token punctuation">)</span>               <span class="token comment"># modulus - returns the remainder</span>
-a <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">and</span> b <span class="token operator">=</span> <span class="token number">3.142</span>
 </pre><pre data-role="codeBlock" data-info class="language-"><code>5.1419999999999995
 6.284
 -1.142
@@ -1219,6 +1216,7 @@ volume<span class="token punctuation">,</span> surface_area<span class="token pu
 <p>For the rest of this workshop we will be using a dataset derived from the Movielens opensource datasets (<a href="https://movielens.org/">https://movielens.org/</a>). It is the one we downloaded at the beginning of the workshop. Our dataset provides viewers ratings of nearly 3000 movies from a variety of genres.</p>
 <p>Initially we will use the dataset to demonstrate the pandas package. We will then use it to create some simple graphics</p>
 <h2>What is Pandas?</h2>
+<p><strong>The Notebook for this section can be found</strong> <a href="scripts\Python_Essentials_basics_pandas.ipynb">here</a></p>
 <p>pandas is a Python library containing a set of functions and specialised data structures that have been designed to help Python programmers to perform data analysis tasks in a structured way.</p>
 <p>Most of the things that pandas can do can be done with basic Python, but the collected set of pandas functions and data structure makes the data analysis tasks more consistent in terms of syntax and therefore aids readabilty.</p>
 <p>Particular features of pandas that we will be looking at over this and the next couple of episodes include:</p>
@@ -1428,7 +1426,7 @@ df_movies<span class="token punctuation">[</span><span class="token string">&apo
                       df_movies<span class="token punctuation">.</span>Average <span class="token operator">+</span> \
                       df_movies<span class="token punctuation">.</span>Good <span class="token operator">+</span> \
                       df_movies<span class="token punctuation">.</span>Excellent
-                      df_movies<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+df_movies<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </pre><p>To drop a column we use the <code>drop()</code> method</p>
 <pre data-role="codeBlock" data-info="python" class="language-python">df_movies<span class="token punctuation">.</span>drop<span class="token punctuation">(</span>columns <span class="token operator">=</span> <span class="token string">&apos;Total&apos;</span><span class="token punctuation">,</span> inplace <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
 
